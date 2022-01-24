@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://images.thehive-services.com/open-columbia-co/coveredbridge04.jpg">
+    <link rel='stylesheet' href='https://beedevservices.github.io/beedev-css/framework/beedev.css'>
+    <link rel="stylesheet" href="{% static 'styles.css'%}">
+    <title>Open Columbia County</title>
+</head>
+<body>
+    <header>
+        <div class="row">
+            <img src="https://images.thehive-services.com/open-columbia-co/newbridge.png" alt="Covered Bridge">
+            <h1>Open Columbia County</h1>
+        </div>
+        <nav>
+            {% block menu %} {% include 'menu.html' %} {% endblock %}
+        </nav>
+    </header>
+    <main>
+        <h2>A <a href="https://www.codeforamerica.org/">Code for America</a> Brigade</h2>
+        <div class="column main">
+            <p>Open CodeFest is currently still being held virtually.  We want to make sure that anyone regardless of their physical location can join us. <br><br>We may eventually start meeting locally but we plan to always keep the virtual doors open.  <br><br><br><br>Looking for how you can join us?</p>
+            <ol>
+                <li><a href="https://www.meetup.com/open-columbia-co/" target="_blank">Meetup</a></li>
+                <li><a href="https://join.slack.com/t/opencolumbiacounty/shared_invite/zt-ytbw5rme-oslvZO_z_zI2bhLtp029Ig" target="_blank">Slack</a></li>
+                <li><a href="https://discord.com/invite/97yu35EfzB" target="_blank">Discord</a></li>
+            </ol>
+        </div>
+        <div class="column altMain">
+            <p>Open Columbia County addresses local social and civic challenges through creative uses of technology. Although we are part of Code for America, we're not solely focused on coding! We foster relationships between government, nonprofit, academic, for-profit companies, residents, civic technologists, analysts, designers, and many more. All are welcome!</p>
+            <hr>
+        </div>
+    </main>
+    <footer>
+        {% block footer %} {% include 'footer.html' %} {% endblock %}
+    </footer>
+</body>
+</html>

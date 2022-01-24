@@ -1,0 +1,188 @@
+.a {
+  text-decoration: none;
+  color: #c57633;
+}
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+table,
+th,
+td {
+  border: 1px solid #c57633;
+}
+table a,
+th a,
+td a {
+  text-decoration: none;
+}
+table {
+  width: 75%;
+  margin: 0.5em;
+  background-color: #fff3cd;
+  margin-bottom: 2em;
+}
+th,
+td {
+  padding: 0.5em;
+  text-align: center;
+  font-size: 1.2em;
+}
+body header {
+  background-color: #e8e8e8;
+  border: 2px groove #c57633;
+  border-radius: 20%;
+  width: 75%;
+}
+body header .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body header nav a {
+  text-decoration: none;
+  color: #c57633;
+}
+body main h2 a {
+  text-decoration: none;
+  color: #c57633;
+}
+body main .member {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+body main .section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+}
+body main .section .blockquote {
+  font-style: italic;
+  background-color: #afaaaa;
+  margin-bottom: 0;
+}
+body main .section .connect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+body main .section .connect h4 {
+  align-self: flex-start;
+}
+body main .section .connect ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  width: 90%;
+  margin: 0.2em 0;
+}
+body main .section .connect ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  margin: 0.2em 0;
+}
+body main .section .connect ul li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body main .section .connect ul li a img {
+  max-width: 40%;
+  margin: 0 1em;
+}
+body main .section .connect ul #membership {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  margin: 0.2em 0;
+}
+body main .section .connect ul #membership a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body main .section .connect ul #membership a img {
+  max-width: 40%;
+  margin: 0 1em;
+}
+body main .main {
+  width: 50%;
+  background-color: #fff3cd;
+  padding: 1em;
+  text-align: center;
+  margin: 1em;
+}
+body main .main ol {
+  text-align: left;
+}
+body main .main ol li a {
+  text-decoration: none;
+  color: #c57633;
+}
+body main .altMain {
+  width: 75%;
+  margin: 1em;
+}
+body main .altMain hr {
+  width: 100%;
+  height: 3px;
+  border-radius: 20%;
+  background-color: #c57633;
+}
+body main .conduct {
+  width: 75%;
+}
+body footer {
+  background-color: #e8e8e8;
+  border: 2px groove #c57633;
+  border-radius: 20%;
+  width: 75%;
+}
+body footer .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  justify-content: space-around;
+}
+body footer .row .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body footer .row .column button {
+  margin: 0.5em 0;
+  background-color: #fff3cd;
+  border: 2px groove #c57633;
+}
+body footer .row .column button a {
+  text-decoration: none;
+  color: black;
+}

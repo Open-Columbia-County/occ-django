@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://images.thehive-services.com/open-columbia-co/coveredbridge04.jpg">
+    <link rel='stylesheet' href='https://beedevservices.github.io/beedev-css/framework/beedev.css'>
+    <link rel="stylesheet" href="{% static 'styles.css'%}">
+    <title>Open Columbia County</title>
+</head>
+<body>
+    <header>
+        <div class="row">
+            <img src="https://images.thehive-services.com/open-columbia-co/newbridge.png" alt="Covered Bridge">
+            <h1>Open Columbia County</h1>
+        </div>
+        <nav>
+            {% block menu %} {% include 'menu.html' %} {% endblock %}
+        </nav>
+    </header>
+    <main>
+        <h1>Our Members</h1>
+        <div class="member">
+            <h2>Brigade Team:</h2>
+            <ul>
+                <li>Team Email: <a href='mailto:hello@opencolumbiaco.org'>hello@opencolumbiaco.org</a></li>
+                <li><a href="https://www.linkedin.com/company/open-columbia-county/">Brigade LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/openColumbiaCounty">Brigade Facebook</a></li>
+                <li><a href="https://twitter.com/OpenColumbiaCo">Twitter</a></li>
+                <li><a href="https://www.instagram.com/opencolumbiaco/">Instagram</a></li>
+            </ul>
+        </div>
+        {% for role in roles %}
+            {% if role.name == 'Captain' %}
+                <div class="member">
+                    <h2>Brigade Captain:</h2>
+                    {% for member in members %}
+                        {% if role.id == member.role_id %}
+                            {% if member.firstName %}
+                                <h3>{{member.firstName}} {{member.lastName}}</h3>
+                            {% else %}
+                                <h3>Position Currently Open</h3>
+                            {% endif %}
+                            <ul>
+                                {% if member.brigadeEmail %}
+                                    <li>Brigade Email: <a href="mailto:{{member.brigadeEmail}}" target="_blank">{{member.brigadeEmail}}</a></li>
+                                {% else %}
+                                    
+                                {% endif %}
+                                {% if member.personalEmail %}
+                                    <li>Personal Email: <a href="mailto:{{member.personalEmail}}" target="_blank">{{member.personalEmail}}</a></li>
+                                {% else %}
+                                    
+                                {% endif %}
+                                {% if member.linkedIn %}
+                                    <li><a href="{{member.linkedIn}}" target="_blank">LinkedIn</a></li>
+                                {% else %}
+                                    
+                                {% endif %}
+                            </ul>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% elif role.name == 'Social' %}
+            <div class="member">
+                <h2>Social Media Lieutenant:</h2>
+                {% for member in members %}
+                    {% if role.id == member.role_id %}
+                        {% if member.firstName %}
+                            <h3>{{member.firstName}} {{member.lastName}}</h3>
+                        {% else %}
+                            <h3>Position Currently Open</h3>
+                        {% endif %}
+                        <ul>
+                            {% if member.brigadeEmail %}
+                                <li>Brigade Email: <a href="mailto:{{member.brigadeEmail}}" target="_blank">{{member.brigadeEmail}}</a></li>
+                            {% else %}
+                                
+                            {% endif %}
+                            {% if member.personalEmail %}
+                                <li>Personal Email: <a href="mailto:{{member.personalEmail}}" target="_blank">{{member.personalEmail}}</a></li>
+                            {% else %}
+                                
+                            {% endif %}
+                            {% if member.linkedIn %}
+                                <li><a href="{{member.linkedIn}}" target="_blank">LinkedIn</a></li>
+                            {% else %}
+                                
+                            {% endif %}
+                        </ul>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% elif role.name == 'Webmaster' %}
+            <div class="member">
+                <h2>Website Quartermaster:</h2>
+                {% for member in members %}
+                    {% if role.id == member.role_id %}
+                        {% if member.firstName %}
+                            <h3>{{member.firstName}} {{member.lastName}}</h3>
+                        {% else %}
+                            <h3>Position Currently Open</h3>
+                        {% endif %}
+                        <ul>
+                            {% if member.brigadeEmail %}
+                                <li>Brigade Email: <a href="mailto:{{member.brigadeEmail}}" target="_blank">{{member.brigadeEmail}}</a></li>
+                            {% else %}
+                                
+                            {% endif %}
+                            {% if member.personalEmail %}
+                                <li>Personal Email: <a href="mailto:{{member.personalEmail}}" target="_blank">{{member.personalEmail}}</a></li>
+                            {% else %}
+                                
+                            {% endif %}
+                            {% if member.linkedIn %}
+                                <li><a href="{{member.linkedIn}}" target="_blank">LinkedIn</a></li>
+                            {% else %}
+                                
+                            {% endif %}
+                        </ul>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="member">
+                <h2>Safety Officer:</h2>
+                {% for member in members %}
+                    {% if role.id == member.role_id %}
+                        {% if member.firstName %}
+                            <h3>{{member.firstName}} {{member.lastName}}</h3>
+                        {% else %}
+                            <h3>Position Currently Open</h3>
+                        {% endif %}
+                        <ul>
+                            {% if member.brigadeEmail %}
+                                <li>Brigade Email: <a href="mailto:{{member.brigadeEmail}}" target="_blank">{{member.brigadeEmail}}</a></li>
+                            {% else %}
+                                
+                            {% endif %}
+                            {% if member.personalEmail %}
+                                <li>Personal Email: <a href="mailto:{{member.personalEmail}}" target="_blank">{{member.personalEmail}}</a></li>
+                            {% else %}
+                                
+                            {% endif %}
+                            {% if member.linkedIn %}
+                                <li><a href="{{member.linkedIn}}" target="_blank">LinkedIn</a></li>
+                            {% else %}
+                                
+                            {% endif %}
+                        </ul>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% endif %}
+        {% endfor %}
+    </main>
+    <footer>
+        {% block footer %} {% include 'footer.html' %} {% endblock %}
+    </footer>
+</body>
+</html>

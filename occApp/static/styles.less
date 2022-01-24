@@ -1,0 +1,173 @@
+@grey: #e8e8e8;
+@dkOrange: #c57633;
+@yellow: #fff3cd;
+@bg: #afaaaa;
+
+@border: 2px groove @dkOrange;
+.a {
+    text-decoration: none;
+    color: @dkOrange;
+}
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.flexcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+table, th, td {
+    border: 1px solid @dkOrange;
+
+    a {
+        text-decoration: none;
+    }
+}
+table {
+    width: 75%;
+    margin: .5em;
+    background-color: @yellow;
+    margin-bottom: 2em;
+}
+th, td {
+    padding: .5em;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+body {
+    header {
+        background-color: @grey;
+        border: @border;
+        border-radius: 20%;
+        width: 75%;
+        .row {
+            .flexrow();
+        }
+        nav {
+            a {
+                .a();
+            }
+        }
+    }
+    main {
+        h2 {
+            a {
+                .a();
+            }
+        }
+        .member {
+            .flexcolumn();
+            min-width: 300px;
+        }
+        .section {
+            .flexcolumn();
+            width: 75%;
+            .blockquote {
+                font-style: italic;
+                background-color: @bg;
+                margin-bottom: 0;
+            }
+            .connect {
+                .flexcolumn();
+                width: 90%;
+                
+                h4 {
+                    align-self: flex-start;
+                }
+                ul {
+                    .flexcolumn();
+                    align-self: flex-start;
+                    width: 90%;
+                    margin: .2em 0;
+
+                    li {
+                        .flexrow();
+                        align-self: flex-start;
+                        margin: .2em 0;
+                        a {
+                            .flexrow();
+                            img {
+                                max-width: 40%;
+                                margin: 0 1em;
+                            }
+                        }
+                    }
+                    #membership {
+                        .flexcolumn();
+                        align-self: flex-start;
+                        margin: .2em 0;
+                        a {
+                            .flexrow();
+                            img {
+                                max-width: 40%;
+                                margin: 0 1em;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .main {
+            width: 50%;
+            background-color: @yellow;
+            padding: 1em;
+            text-align: center;
+            margin: 1em;
+
+            ol {
+                text-align: left;
+                li {
+                    a {
+                        .a();
+                    }
+                }
+            }
+        }
+        .altMain {
+            width: 75%;
+            margin: 1em;
+
+            hr {
+                width: 100%;
+                height: 3px;
+                border-radius: 20%;
+                background-color: @dkOrange;
+            }
+        }
+        .conduct {
+            width: 75%;
+        }
+    }
+    footer {
+        background-color: @grey;
+        border: @border;
+        border-radius: 20%;
+        width: 75%;
+        .row {
+            .flexrow();
+            width: 75%;
+            justify-content: space-around;
+
+            .column {
+                .flexcolumn();
+
+                button {
+                    margin: .5em 0;
+                    background-color: @yellow;
+                    border: @border;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}

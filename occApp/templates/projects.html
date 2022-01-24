@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://images.thehive-services.com/open-columbia-co/coveredbridge04.jpg">
+    <link rel='stylesheet' href='https://beedevservices.github.io/beedev-css/framework/beedev.css'>
+    <link rel="stylesheet" href="{% static 'styles.css'%}">
+    <title>Open Columbia County</title>
+</head>
+<body>
+    <header>
+        <div class="row">
+            <img src="https://images.thehive-services.com/open-columbia-co/newbridge.png" alt="Covered Bridge">
+            <h1>Open Columbia County</h1>
+        </div>
+        <nav>
+            {% block menu %} {% include 'menu.html' %} {% endblock %}
+        </nav>
+    </header>
+    <main>
+        <h1>Our Work</h1>
+        <table>
+            <tr>
+                <th>Project Status</th>
+                <th>Project Name</th>
+                <th>Live Link</th>
+                <th>View More</th>
+            </tr>
+            {% for project in projects %}
+                <tr>
+                    {% for status in statuses %}
+                        {% if project.status_id == status.id %}
+                            <td>{{status.name}}</td>
+                        {% endif %}
+                    {% endfor %}
+                    <td>{{project.name}}</td>
+                    {% if project.liveLink %}
+                        <td><a href="{{project.liveLink}}">{{project.liveLink}}</a></td>
+                    {% else %}
+                        <td>N/A</td>
+                    {% endif %}
+                    <td><a href="/project/{{project.id}}/view">View More</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </main>
+    <footer>
+        {% block footer %} {% include 'footer.html' %} {% endblock %}
+    </footer>
+</body>
+</html>

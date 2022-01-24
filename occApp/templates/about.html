@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://images.thehive-services.com/open-columbia-co/coveredbridge04.jpg">
+    <link rel='stylesheet' href='https://beedevservices.github.io/beedev-css/framework/beedev.css'>
+    <link rel="stylesheet" href="{% static 'styles.css'%}">
+    <title>Open Columbia County</title>
+</head>
+<body>
+    <header>
+        <div class="row">
+            <img src="https://images.thehive-services.com/open-columbia-co/newbridge.png" alt="Covered Bridge">
+            <h1>Open Columbia County</h1>
+        </div>
+        <nav>
+            {% block menu %} {% include 'menu.html' %} {% endblock %}
+        </nav>
+    </header>
+    <main>
+        <h2>About Open Columbia County</h2>
+        <div class='altMain'>
+            <h4>What is Open Columbia County?</h4>
+            <p>We are a group of volunteers focused on helping our Communities.  We are part of the <a href='http://brigade.codeforamerica.org/' target='_blank'>Code for America Brigade network</a>, made up of developers, designers, geeks, and many others who want to use technology to help solve civic and social problems</p>
+        </div>
+        <div class='altMain'>
+            <h4>What technology do we use?</h4>
+            <p>We aren't just using computers or building websites.  We are using our skills to create useful applications or websites that serve a purpose. If we see a need in the community for something we are using our collective skills to do our best to solve this need.  You don't need to be a Developer to help build a website, maybe you are good at finding resources that we can add to that site.</p>
+        </div>
+        <div class='altMain'>
+            <h4>Code for America</h4>
+            <p>Open Columbia County  is part of the <a href='http://brigade.codeforamerica.org/' target='_blank'>Brigade network</a> of Code for America, founded January 2021. To learn more about Code for America click <a href='https://www.codeforamerica.org/' target='_blank'>here</a>.</p>
+        </div>
+        <div class='altMain'>
+            <h4>How we Work</h4>
+            <p>Every 2 weeks we <a href='https://www.meetup.com/open-columbia-co/' target='_blank'>meet up</a> every 2 weeks in the evening to talk about our communities, projects, and more. We also have a <a href='https://communityinviter.com/apps/opencolumbiacounty/join' target='_blank'>Slack Workspace</a> and <a href='https://discord.com/invite/97yu35EfzB' target='_blank'>Discord Server</a> where we can talk on a regular basis to keep each other in the loop on projects we are working on.  Both are open to the public so others can reach out to us with out needing to join. All of our projects are also open source and can be found on our <a href='https://github.com/Open-Columbia-County' target='_blank'>GitHub Organization</a></p>
+            <hr>
+        </div>
+    </main>
+    <footer>
+        {% block footer %} {% include 'footer.html' %} {% endblock %}
+    </footer>
+</body>
+</html>
